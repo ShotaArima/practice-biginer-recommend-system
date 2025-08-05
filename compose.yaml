@@ -1,0 +1,10 @@
+services:
+  recommend-sys:
+    build: .
+    volumes:
+      - ./src/:/app/
+      - ./data/:/app/data/
+      - ./output/:/output/
+    tty: true
+    working_dir: /app/
+    command: bash
